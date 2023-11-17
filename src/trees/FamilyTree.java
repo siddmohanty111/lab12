@@ -74,6 +74,13 @@ public class FamilyTree
             // draw a tree, mark any leaf node, and then mark its ancestors in order from
             // recent to ancient. Expect a question about this on the final exam.
 
+            TreeNode current = this.parent;
+            
+            while (current != null) {
+            	ancestors.add(current);
+            	current = current.parent;
+            }
+            
             return ancestors;
         }
         
